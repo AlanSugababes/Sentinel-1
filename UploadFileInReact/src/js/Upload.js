@@ -77,8 +77,6 @@ class Upload extends Component {
 
     submitFile() {
 
-        // document.location.reload(true)
-
         let reportTitleValue = document.getElementById('ReportName').value;
         let filevalue = document.getElementById('fileUpload').value;
 
@@ -93,6 +91,8 @@ class Upload extends Component {
 
             let filePath = document.getElementById('fileUpload').value;
             console.log(filePath);
+
+
             return filePath;
 
         }
@@ -106,7 +106,6 @@ class Upload extends Component {
         let keywordLocation = document.getElementById('keyWordLocation');
         let keywordValue = document.getElementById('keyWordAmount').value;
 
-        //change hidden not hidden on the paragraph tag.
     }
 
     
