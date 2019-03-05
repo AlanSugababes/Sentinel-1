@@ -1,10 +1,11 @@
 const fileSys = require('fs');
 
-const test = require('./lab1.js');
-const assessedDocImport = fileSys.readFileSync('./jsons/content2.json', 'utf8');
+const test = require('./ExtractFunction.js');
+const assessedDocImport = fileSys.readFileSync('./jsons/data.json', 'utf8');
 const assessedDoc = JSON.parse(assessedDocImport);
-const assessedPages = assessedDoc.formImage.Pages;
-const assessedTexts = assessedDoc.formImage.Pages[0].Texts;
+// const assessedPages = assessedDoc.formImage.Pages;
+// const assessedTexts = assessedDoc.formImage.Pages[0].Texts;
+const assessedPages = assessedDoc.text;
 
 const keywordsImport = fileSys.readFileSync('keywords.json', 'utf8');
 const keywordList = JSON.parse(keywordsImport);
