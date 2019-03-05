@@ -23,6 +23,7 @@ for (let text in assessedPages) {
     }
 }
 
+keywordCount.push({ word:"total word count", count: extractedText.length });
 for (let targetWord in keywordList.keywords) {
   let counter = 0;
   for (let caughtWord in extractedText) {
