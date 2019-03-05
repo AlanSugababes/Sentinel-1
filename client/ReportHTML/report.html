@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,12 +8,14 @@
     <meta name="author" content="Alan Sugarbabes">
     <title>Threat analysis report</title>
     <style>
-.navbar {
-  background-color: #aec6cf;
-}
+        .navbar {
+            background-color: #aec6cf;
+        }
+
         .navbar .navbar-text {
-  color: #000000;
-}
+            color: #000000;
+        }
+
         .wrapper {
             height: 200px;
             width: 200px;
@@ -1117,10 +1120,24 @@
         </div>
     </nav>
 
+    <!-- load JSON data -->
+
+    <script>
+
+
+
+    </script>
+
+
     <main role="main" class="container">
         <!-- Title header -->
         <div class="text-center mt-5 pt-5">
-            <h1>Analysis of Example.pdf</h1> <!-- insert variable for document name here -->
+            <h1>Analysis of <span id="documentTitle"> </span><!-- insert variable for document name here -->
+                <script>
+                    document.getElementById("documentTitle").innerHTML = documentTitle;
+
+                </script>
+            </h1>
         </div>
         <div class="row"><strong>Report generated&nbsp;<span id="today"></span></strong></div> <!-- insert datestamp that this page was generated -->
         <br>
@@ -1128,27 +1145,43 @@
         <!--   2 column layout  -->
         <div class="row">
             <!-- Left hand column  -->
-            <div class="col-3">
-                <ul>
-                    <li>list</li>
-                    <li>of</li>
-                    <li>keywords</li>
-                    <li>found</li>
-                    <li>in</li>
-                    <li>the</li>
-                    <li>document</li>
-                </ul>
+            <div class="col-3 list group" id="listOfWords">
+                <ul id="ul-test"></ul> <!-- bulleted list of keywords  -->
+                <script>
+//                    ul = document.getElementById("ul-test");
+//                    for (var i = 0, len = word.length; i < len; i++) {
+//                        var li = document.createElement("li");
+//                        var text = document.createTextNode(word[i]);
+//                        li.appendChild(text);
+//                        ul.appendChild(li);
+//                    }
+
+                </script>
             </div>
+
             <!-- Right hand column  -->
             <div class="col-9 text-center">
-                <h2>300 words in document &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 28 keywords identified</h2>
+                <script>
+                    
+                    // values entered just for testing 
+                    let totalWordCount = 300;
+                     let totalKeywords = 28;
+                    let threatPercentage = (100 / totalWordCount) * totalKeywords;
+                    let percentage = Math.round(threatPercentage);
+                    let minusPercentage = 100 - percentage;
+                    let divString1 = 'pie start-0 end-10';
+                    document.write('<h2>' +totalWordCount +' words in document &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '+totalKeywords+' keywords identified</h2>');
+                </script>
+
                 <br>
 
-                <!-- Pie chart - enter percentage of threat level here  -->
+                <!-- Pie chart -->
                 <span class="wrapper hideMe">
-                    <div class="pie start-0 end-25"></div>
-                    <div class="pie big start-25 end-75"></div>
-                    <div class="pie over"><span>25%</span></div>
+                    <script>
+                        document.write('<div class="pie start-0 end-'+percentage+'"></div>');
+                        document.write('<div class="pie big start-'+percentage+' end-'+minusPercentage+'"></div>');
+                        document.write('<div class="pie over"><span>'+percentage+'%</span></div>');
+                    </script>                   
                 </span>
 
                 <br><br><br>
