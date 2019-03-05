@@ -1,0 +1,25 @@
+{
+  "name": "Sentinel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd server && npm install && cd ../client && npm install",
+    "client": "cd client && npm start",
+    "server": "cd server && npm run start",
+    "start": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanSugababes/Sentinel-1"
+  },
+  "author": "Alan Sugababes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlanSugababes/Sentinel-1/issues"
+  },
+  "homepage": "https://github.com/AlanSugababes/Sentinel-1#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
