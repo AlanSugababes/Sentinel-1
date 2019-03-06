@@ -1,3 +1,23 @@
+[
+  {
+  "word" : "node"
+},
 {
-  "keywords" : ["node", "javascript", "express", "and", "the", "%E2%80%BA", "Testing"]
+  "word" :"javascript"
+},
+{
+  "word" : "express"
+},
+{
+  "word" : "and"
+},
+{
+  "word" : "the"
+},
+{
+  "word" : "%E2%80%BA"
+},
+{  
+  "word" : "Testing"
 }
+]

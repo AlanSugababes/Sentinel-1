@@ -7,16 +7,19 @@ let extractKeywords = function(assessedPages, keywordList) {
   keywordCount.push(
         { Title: assessedPages.info.Title },
         { Total:"totalWordCount", count: extractedText.length });
-  for (let targetWord in keywordList.keywords) {
+console.log(keywordList);
+  for (let targetWord in keywordList) {
     let counter = 0;
+
     for (let caughtWord in extractedText) {
-      if (extractedText[caughtWord] == keywordList.keywords[targetWord]) {
+      if (extractedText[caughtWord] == keywordList[targetWord].word) {
         counter++;
       }
     }
-    let tempObject = { word: keywordList.keywords[targetWord], count: counter };
+    let tempObject = { word: keywordList[targetWord].word, count: counter };
     keywordCount.push(tempObject);
   }
+
   return keywordCount;
 }
 
