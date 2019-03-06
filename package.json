@@ -2,7 +2,7 @@
   "name": "Sentinel",
   "version": "1.0.0",
   "description": "",
-  "main": "readkeywordsfromdatabase.js",
+  "main": "expressServer.js",
   "scripts": {
     "install": "cd keyworddatabase && npm install ",
     "server": "cd keyworddatabase && npm run start",
