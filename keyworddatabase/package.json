@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "start":"nodemon readkeywordsfromdatabase.js"
+    "start":"nodemon expressServer.js"
   },
   "author": "anita",
   "license": "ISC"
