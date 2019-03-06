@@ -2,9 +2,11 @@ let extractKeywords = function(assessedPages, keywordList) {
   let extractedText = [];
   const keywordCount = [];
 
-  extractedText = assessedPages.split(" ");
+  extractedText = assessedPages.text.split(" ");
 
-  keywordCount.push({ word:"total word count", count: extractedText.length });
+  keywordCount.push(
+        { Title: assessedPages.info.Title },
+        { Total:"totalWordCount", count: extractedText.length });
   for (let targetWord in keywordList.keywords) {
     let counter = 0;
     for (let caughtWord in extractedText) {
