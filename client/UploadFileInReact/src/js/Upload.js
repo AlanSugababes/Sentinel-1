@@ -123,13 +123,13 @@ document.location.reload(true);
 
                 <p id="intro">Welcome. In order to use this upload service you will need to select <br></br>
                     a PDF file. Please select one and add a title for the report to continue.</p>
-
-                    <div  className="reportSection"><ReportTitle clickable={this.ableToSubmit} /></div>
-
-                    <div className="chooseFile"> <SelectFile  clickable={this.ableToSubmit} /></div>
-
-                    <button onClick={this.submitFile} id="submitButton" >Submit</button>
-
+                    
+                    <form>
+                        <div  className="reportSection"><ReportTitle clickable={this.ableToSubmit} /></div>
+                        <div className="chooseFile"> <SelectFile  clickable={this.ableToSubmit} /></div>
+                        <button onClick={this.submitFile} id="submitButton" >Submit</button>
+                    </form>
+        
                     <p>{this.state.fileTypeMessage}</p>
                     <p>{this.state.reportNameMessage}</p>
                     <p>{this.state.submitMessage}</p>
