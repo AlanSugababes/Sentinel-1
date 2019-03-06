@@ -6,7 +6,7 @@
   "scripts": {
     "install": "cd keyworddatabase && npm install ",
     "server": "cd keyworddatabase && npm run start",
-    "start": "concurrently \"npm run server\" "
+    "start": "npm run server"
   },
   "repository": {
     "type": "git",
