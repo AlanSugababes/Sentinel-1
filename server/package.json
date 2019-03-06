@@ -4,9 +4,9 @@
   "description": "Sentinel side",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": keyworddatabase/readkeywordsfromdatabase.js"
     },
-  "author": "Luke Montgomery",
+  "author": "Alan sugababes",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.10"
