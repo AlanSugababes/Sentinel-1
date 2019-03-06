@@ -9,11 +9,7 @@
     <title>Threat analysis report</title>
     <style>
         .navbar {
-            background-color: #aec6cf;
-        }
-
-        .navbar .navbar-text {
-            color: #000000;
+            background-color: #3d3d3d;
         }
 
         .wrapper {
@@ -1106,7 +1102,7 @@
 <body>
 
     <nav class="navbar navbar-expand-md fixed-top">
-        <h2><strong>Sentinel</strong></h2>
+        <h2 style="color: white;"><strong>Sentinel</strong></h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -1123,25 +1119,30 @@
     <!-- load JSON data -->
 
     <script>
-const urlParams = new URLSearchParams(location.search);
-const documentTitle = urlParams.get('title');
-const totalWordCount = urlParams.get('totalwordcount');
-const word = urlParams.getAll('word') // Will store multiple words in an array
-const wordcount = urlParams.getAll('count') // Will store all word counts in an array
-
-
+        const urlParams = new URLSearchParams(location.search);
+        const documentTitle = urlParams.get('name');
+        const fileName = urlParams.get('Title');
+        const totalWordCount = urlParams.get('count');
+        const word = urlParams.getAll('word') // Will store multiple words in an array
+        const wordcount = urlParams.getAll('count') // Will store all word counts in an array        
+        
+        console.log(totalWordCount);
     </script>
 
 
     <main role="main" class="container">
         <!-- Title header -->
         <div class="text-center mt-5 pt-5">
-            <h1>Analysis of <span id="documentTitle"> </span><!-- insert variable for document name here -->
-                <script>
-                    document.getElementById("documentTitle").innerHTML = documentTitle;
-
+            <h1><span id="documentTitle"> </span><!-- insert variable for document name here -->
+             <script>
+                    document.getElementById("documentTitle").innerHTML = documentTitle; 
                 </script>
             </h1>
+            <h2>Analysis of <span id="fileName"> </span><!-- insert variable for document name here -->
+                <script>
+                    document.getElementById("fileName").innerHTML = fileName;
+                </script>
+            </h2>
         </div>
         <div class="row"><strong>Report generated&nbsp;<span id="today"></span></strong></div> <!-- insert datestamp that this page was generated -->
         <br>

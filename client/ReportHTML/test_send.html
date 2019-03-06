@@ -4,19 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <title>SEND</title>
+      <title>SEND</title>
     
     <!--Template based on URL below-->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    h1 {
+  /* Extra small devices (phones, less than 768px) */
+  font-size: 150px;
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Place your stylesheet here-->
-    <link href="/css/stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -56,8 +57,44 @@
 
     <main role="main" class="container">
 
-        <div class="text-center mt-5 pt-5">
-            <a href="report.html?title=Narwhale.pdf&totalwordcount=255&count=198&word=test&word=2ndTest&word=Yahoo"><h1>SEND</h1></a>
+        <div class="text-center mt-5 pt-5"><br><br>
+        
+            <script>
+            let documentName = 'Secret Squirrel file';
+           
+                
+            var dataArray = [{ Title: 'Linux® Command Line and Shell Scripting Bible'},
+                                            { Total: 'totalWordCount', count: 221783 },
+                                            { word: 'node', count: 2 },
+                                            { word: 'javascript', count: 0 },
+                                            { word: 'express', count: 2 },
+                                            { word: 'and', count: 2239 },
+                                            { word: 'the', count: 13961 },
+                                            { word: '%E2%80%BA', count: 0 },
+                                            { word: 'Testing', count: 13 }] ;
+             
+      
+//  Create URL         
+var TWC = dataArray[1];                
+awesomeString = 'report.html?name=' + documentName;
+for (var i = 0; i < dataArray.length; i++){
+var obj = dataArray[i];
+for (var key in obj){
+var attrName = key;
+var attrValue = obj[key];
+awesomeString+='&' +attrName + '=' + attrValue;
+    }
+}        
+URL1 = encodeURI(awesomeString);                
+                             
+                   
+            document.write('<a href='+ URL1 + '><h1>SEND THE STUPID FILE!</h1></a>');
+ // End of URL
+                
+            </script>
+            
+            
+           <!-- <a href="report.html?title=Narwhale.pdf&totalwordcount=255&word=test&word=2ndTest&word=Yahoo"><h1>SEND THE STUPID FILE!</h1></a>  -->
            
         </div>
 
