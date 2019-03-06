@@ -1,24 +1,9 @@
 let extractKeywords = function(assessedPages, keywordList) {
-  const extractedText = [];
+  let extractedText = [];
   const keywordCount = [];
 
-  console.log(assessedPages);
-  // let words = assessedPages.split(" ");
-  // console.log(words);
-  // for (let text in assessedPages) {
-  //     let tempHold = assessedPages[text];
-  //
-  //     console.log(tempHold);
-  //     for (let word in tempHold) {
-  //       let temp = tempHold[word];
-  //       // for (var caught in temp) {
-  //       //   console.log(temp[caught]);
-  //       //   extractedText.push(temp[caught]);
-  //       // }
-  //     }
-  }
-  console.log("hi");
-  return extractedText;
+  extractedText = assessedPages.split(" ");
+
   keywordCount.push({ word:"total word count", count: extractedText.length });
   for (let targetWord in keywordList.keywords) {
     let counter = 0;
