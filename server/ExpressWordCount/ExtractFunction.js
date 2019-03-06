@@ -7,7 +7,6 @@ let extractKeywords = function(assessedPages, keywordList) {
   keywordCount.push(
         { Title: assessedPages.info.Title },
         { Total:"totalWordCount", count: extractedText.length });
-console.log(keywordList);
   for (let targetWord in keywordList) {
     let counter = 0;
 
