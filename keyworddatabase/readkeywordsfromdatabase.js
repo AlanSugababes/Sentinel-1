@@ -6,7 +6,7 @@ const port = 2008;
 let keywordModel = require('./keywordmodelarray.js');
 
 app.listen(port,function(){
-console.log(`listening on port $port`);
+console.log(`listening on port ${port}`);
 });
 mongoose.connect(url);
 let db = mongoose.connection;
