@@ -17,7 +17,9 @@
     "mongoose": "^5.4.15",
     "sinon": "^7.2.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
   "scripts": {
     "test": "mocha",
     "start":"nodemon readkeywordsfromdatabase.js"
