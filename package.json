@@ -1,0 +1,24 @@
+{
+  "name": "Sentinel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "readkeywordsfromdatabase.js",
+  "scripts": {
+    "install": "cd keyworddatabase && npm install ",
+    "server": "cd keyworddatabase && npm run start",
+    "start": "concurrently \"npm run server\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanSugababes/Sentinel-1.git"
+  },
+  "author": "Alan Sugababes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlanSugababes/Sentinel-1/issues"
+  },
+  "homepage": "https://github.com/AlanSugababes/Sentinel-1#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
