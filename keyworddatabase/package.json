@@ -2,7 +2,7 @@
   "name": "keyworddatabase",
   "version": "1.0.0",
   "description": "script to read keywords from text file and store them as array in a mongo database",
-  "main": "inputkeywordstodatabase.js",
+  "main": "expressServer.js",
   "directories": {
     "test": "test"
   },
