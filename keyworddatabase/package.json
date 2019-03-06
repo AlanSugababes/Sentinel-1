@@ -20,6 +20,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "mocha"
+    "start":"readkeywordsfromdatabase.js"
   },
   "author": "anita",
   "license": "ISC"
