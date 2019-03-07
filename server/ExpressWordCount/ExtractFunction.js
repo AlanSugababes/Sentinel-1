@@ -1,4 +1,5 @@
 let extractKeywords = function(assessedPages, keywordList) {
+
   let extractedText = [];
   const keywordCount = [];
 
